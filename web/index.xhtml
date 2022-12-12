@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      >
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form>
+                <h:outputLabel value="Ingrese el nombre del jugador 1: " style="font-size: 30px"/>
+                <h:inputText value="#{playerManager.player1Name}"/>
+                <br></br>
+                <h:outputLabel value="Elija la clase del jugador 1: " style="font-size: 30px"/>
+                <h:selectOneMenu value="#{playerManager.class1}">
+                    <f:selectItem itemValue="WARRIOR" itemLabel="Guerrero" />
+                    <f:selectItem itemValue="ROGUE" itemLabel="Picaro" />
+                    <f:selectItem itemValue="WIZARD" itemLabel="Mago" />
+                </h:selectOneMenu>
+                <br></br>
+                <br></br>
+                <h:outputLabel value="Ingrese el nombre del jugador 2: " style="font-size: 30px"/>
+                <h:inputText value="#{playerManager.player2Name}" />
+                <br></br>
+                <h:outputLabel value="Elija la clase del jugador 2: " style="font-size: 30px"/>
+                <h:selectOneMenu value="#{playerManager.class2}">
+                    <f:selectItem itemValue="WARRIOR" itemLabel="Guerrero" />
+                    <f:selectItem itemValue="ROGUE" itemLabel="Picaro" />
+                    <f:selectItem itemValue="WIZARD" itemLabel="Mago" />
+                </h:selectOneMenu>
+                <br></br>
+                <h:outputLabel value="#{playerManager.message}" style="font-size: 20px"/>
+                <br></br>
+                <h:commandButton value="Registrar" action="#{playerManager.createPlayers()}"/>                            
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+
